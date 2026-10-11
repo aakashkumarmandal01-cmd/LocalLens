@@ -15,7 +15,7 @@ WSGI_APPLICATION='config.wsgi.application'
 DATABASES={'default':dj_database_url.parse(os.getenv('DATABASE_URL'),conn_max_age=600,ssl_require=not DEBUG)} if os.getenv('DATABASE_URL') else {'default':{'ENGINE':'django.db.backends.sqlite3','NAME':BASE_DIR/'db.sqlite3'}}
 AUTH_PASSWORD_VALIDATORS=[{'NAME':'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},{'NAME':'django.contrib.auth.password_validation.MinimumLengthValidator'},{'NAME':'django.contrib.auth.password_validation.CommonPasswordValidator'}]
 LANGUAGE_CODE='en-us'; TIME_ZONE='Asia/Kolkata'; USE_I18N=True; USE_TZ=True
-static/'; STATIC_ROOT=BASE_DIR/'staticfiles'; STATICFILES_DIRS=[BASE_DIR/'static'];STATIC_ROOT=[BASE_DIR/'static']
+STATIC_URL='/static/'; STATIC_ROOT=BASE_DIR/'staticfiles'; STATICFILES_DIRS=[BASE_DIR/'static'];STATIC_ROOT=[BASE_DIR/'static']
 MEDIA_URL='media/'; MEDIA_ROOT=BASE_DIR/'media'
 DEFAULT_AUTO_FIELD='django.db.models.BigAutoField'
 LOGIN_URL='login'; LOGIN_REDIRECT_URL='home'; LOGOUT_REDIRECT_URL='home'
